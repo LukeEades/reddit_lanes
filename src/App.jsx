@@ -5,7 +5,6 @@ import "./stylesheets/subreddit.css"
 const getReddit = name => {
   return fetch(`https://www.reddit.com/r/${name}.json`)
     .then(response => {
-      console.log(response)
       if (response.status === 404) {
         throw new Error("endpoint doesn't exist")
       }
